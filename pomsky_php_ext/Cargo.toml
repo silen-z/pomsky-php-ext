@@ -1,0 +1,12 @@
+[package]
+name = "php-pomsky"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+pomsky = "0.7.0"
+ext-php-rs = "*"
+
+[lib]
+crate-type = ["cdylib"]
+
