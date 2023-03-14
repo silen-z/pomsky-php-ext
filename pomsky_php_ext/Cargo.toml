@@ -5,7 +5,7 @@ edition = "2021"
 
 [dependencies]
 pomsky = "0.7.0"
-ext-php-rs = "*"
+# ext-php-rs = "*"
 
 [lib]
 crate-type = ["cdylib"]

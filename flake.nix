@@ -40,10 +40,17 @@
           };
           
           phpWithPomsky = pkgs.php81.withExtensions ({ ... }: [ pomskyPhpExt ]);
+
+          phpWithFfi = pkgs.php81.withExtensions ({ all, ... }: [ all.ffi ]);
+
         in
         {
           devShells = {
             default = pkgs.mkShell {
+              buildInputs = [ phpWithFfi pkgs.cargo ];
+            };
+
+            phpWithPomsky = pkgs.mkShell {
               buildInputs = [ phpWithPomsky ];
             };
           };
