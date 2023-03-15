@@ -19,5 +19,5 @@ function pomsky(string $pattern): string|null {
     return FFI::string($result);
 }
 
-echo pomsky("ranhnge '0'-'255'");
+echo pomsky("range '0'-'255'");
 
