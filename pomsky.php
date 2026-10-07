@@ -1,5 +1,7 @@
 <?php
 
-for ($i=0; $i<1000; $i++) {
-    echo pomsky("range '0'-'255'");
-}
+echo pomsky\create("range '0'-'255'") . "\n";
+
+$time = Chrono\LocalTime::now();
+
+echo $time->format("%Y") . "\n";;
